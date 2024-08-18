@@ -7,10 +7,24 @@ using System.Threading.Tasks;
 
 namespace MTG_Card_tracker
 {
-    internal class Card(string nameIn, string manaCostIn)
+    class Card()
     {
-        private readonly string name = nameIn;
-        private readonly string manaCost = manaCostIn;
+        private readonly string name;
+        private readonly string manaCost;
+        public Card(string nameIn, string manaCostIn): this()
+        {
+            name = nameIn;
+            manaCost = manaCostIn;
+        }
 
+        public string getName()
+        {
+            return name;
+        }
+
+        public string getManaCost()
+        {
+            return manaCost;
+        }
     }
 }
