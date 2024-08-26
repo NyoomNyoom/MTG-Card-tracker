@@ -17,12 +17,12 @@ namespace MTG_Card_tracker
             manaCost = manaCostIn;
         }
 
-        public string getName()
+        public string GetName()
         {
             return name;
         }
 
-        public string getManaCost()
+        public string GetManaCost()
         {
             return manaCost;
         }
