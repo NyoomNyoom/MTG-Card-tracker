@@ -5,9 +5,10 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="*" />
             <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
         </Grid.RowDefinitions>
+        
         <!-- Define VisualStateManager for responsive states -->
         <VisualStateManager.VisualStateGroups>
             <VisualStateGroup x:Name="CommonStates">
@@ -31,10 +32,11 @@
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
                         <!-- Show bottom navigation bar and adjust layout -->
-                        <Setter TargetName="MainContent" Property="Grid.Row" Value="0" />
-                        <Setter TargetName="MainContent" Property="Grid.RowSpan" Value="1" />
                         <Setter TargetName="NavBar" Property="IsVisible" Value="True" />
-                        <Setter TargetName="NavBar" Property="Grid.Row" Value="2" />
+                        <Setter TargetName="NavBar" Property="Grid.Row" Value="0" />
+                        
+                        <Setter TargetName="MainContent" Property="Grid.Row" Value="2" />
+                        <Setter TargetName="MainContent" Property="Grid.RowSpan" Value="1" />
                     </VisualState.Setters>
                 </VisualState>
             </VisualStateGroup>
@@ -71,9 +73,10 @@
 
         <!-- Bottom navigation bar -->
         <StackLayout x:Name="NavBar" Grid.Row="2" Orientation="Horizontal" BackgroundColor="LightGray" IsVisible="True">
-            <Button Text="home" HorizontalOptions="CenterAndExpand" />
-            <Button Text="Profile" HorizontalOptions="CenterAndExpand" />
-            <Button Text="Settings" HorizontalOptions="CenterAndExpand" />
+            <Button Text="Collection WIP" HorizontalOptions="CenterAndExpand" />
+            <Button Text="Decks WIP" HorizontalOptions="CenterAndExpand" />
+            <Button Text="Deck Builder WIP" HorizontalOptions="CenterAndExpand" />
+            <Button Text="Tracker" HorizontalOptions="CenterAndExpand" />
         </StackLayout>
 
     </Grid>
