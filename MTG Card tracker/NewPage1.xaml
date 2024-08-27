@@ -7,6 +7,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
         
         <!-- Define VisualStateManager for responsive states -->
@@ -19,9 +20,11 @@
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
                         <!-- Hide bottom navigation bar and adjust layout -->
-                        <Setter TargetName="NavBar" Property="IsVisible" Value="False" />
-                        <Setter TargetName="MainContent" Property="Grid.Row" Value="0" />
+                        <Setter TargetName="MainContent" Property="Grid.Row" Value="1" />
                         <Setter TargetName="MainContent" Property="Grid.RowSpan" Value="2" />
+
+                        <Setter TargetName="NavBar" Property="IsVisible" Value="True" />
+                        <Setter TargetName="NavBar" Property="Grid.Row" Value="2" />
                     </VisualState.Setters>
                 </VisualState>
 
@@ -35,7 +38,7 @@
                         <Setter TargetName="NavBar" Property="IsVisible" Value="True" />
                         <Setter TargetName="NavBar" Property="Grid.Row" Value="0" />
                         
-                        <Setter TargetName="MainContent" Property="Grid.Row" Value="2" />
+                        <Setter TargetName="MainContent" Property="Grid.Row" Value="1" />
                         <Setter TargetName="MainContent" Property="Grid.RowSpan" Value="1" />
                     </VisualState.Setters>
                 </VisualState>
