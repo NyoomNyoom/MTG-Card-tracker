@@ -4,10 +4,10 @@
              x:Class="MTG_Card_tracker.MainPage">
 
     <ScrollView>
-        <VerticalStackLayout
+        <HorizontalStackLayout
             Spacing="25"
             Padding="30,0"
-            VerticalOptions="Center">
+            HorizontalOptions="Center">
 
             <Image
                 Source="dotnet_bot.png"
@@ -35,7 +35,7 @@
                 Clicked="OnCounterClicked"
                 HorizontalOptions="Center" />
 
-        </VerticalStackLayout>
+        </HorizontalStackLayout>
     </ScrollView>
 
 </ContentPage>
