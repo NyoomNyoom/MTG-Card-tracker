@@ -75,7 +75,7 @@
             </HorizontalStackLayout>
         </ScrollView>
 
-        <!-- Bottom navigation bar -->
+        <!-- Navigation bar -->
         <StackLayout x:Name="NavBar" Grid.Row="2" Orientation="Horizontal" BackgroundColor="LightGray" IsVisible="True">
             <Button Text="Collection WIP" HorizontalOptions="CenterAndExpand" />
             <Button Text="Decks WIP" HorizontalOptions="CenterAndExpand" />
