@@ -1,41 +1,88 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MTG_Card_tracker.MainPage">
+             x:Class="MTG_Card_tracker.MainPage"
+             BackgroundImageSource="restart_sequence.png">
 
-    <ScrollView>
-        <HorizontalStackLayout
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <!-- Define VisualStateManager for responsive states -->
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="CommonStates">
+                <!-- State for narrow screens -->
+                <VisualState x:Name="Narrow">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <!-- Hide bottom navigation bar and adjust layout -->
+                        <Setter TargetName="MainContent" Property="Grid.Row" Value="1" />
+                        <Setter TargetName="MainContent" Property="Grid.RowSpan" Value="2" />
+
+                        <Setter TargetName="NavBar" Property="IsVisible" Value="True" />
+                        <Setter TargetName="NavBar" Property="Grid.Row" Value="2" />
+                    </VisualState.Setters>
+                </VisualState>
+
+                <!-- State for wide screens -->
+                <VisualState x:Name="Wide">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="600"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <!-- Show bottom navigation bar and adjust layout -->
+                        <Setter TargetName="NavBar" Property="IsVisible" Value="True" />
+                        <Setter TargetName="NavBar" Property="Grid.Row" Value="0" />
+
+                        <Setter TargetName="MainContent" Property="Grid.Row" Value="1" />
+                        <Setter TargetName="MainContent" Property="Grid.RowSpan" Value="1" />
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+
+        <!-- Main content area -->
+        <ScrollView x:Name="MainContent">
+            <HorizontalStackLayout
             Spacing="25"
             Padding="30,0"
             HorizontalOptions="Center">
 
-            <Image
+                <Image
                 Source="dotnet_bot.png"
                 SemanticProperties.Description="Cute dot net bot waving hi to you!"
                 HeightRequest="200"
                 HorizontalOptions="Center" />
 
-            <Label
+                <Label
                 Text="Hello, World!"
                 SemanticProperties.HeadingLevel="Level1"
                 FontSize="32"
                 HorizontalOptions="Center" />
 
-            <Label
+                <Label
                 Text="Welcome to .NET Multi-platform App UI"
                 SemanticProperties.HeadingLevel="Level2"
                 SemanticProperties.Description="Welcome to dot net Multi platform App U I"
                 FontSize="18"
                 HorizontalOptions="Center" />
 
-            <Button
-                x:Name="CounterBtn"
-                Text="Click me"
-                SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="OnCounterClicked"
-                HorizontalOptions="Center" />
+            </HorizontalStackLayout>
+        </ScrollView>
 
-        </HorizontalStackLayout>
-    </ScrollView>
+        <!-- Navigation bar -->
+        <StackLayout x:Name="NavBar" Grid.Row="2" Orientation="Horizontal" BackgroundColor="LightGray" IsVisible="True">
+            <Button Text="Collection WIP" HorizontalOptions="CenterAndExpand" />
+            <Button Text="Decks WIP" HorizontalOptions="CenterAndExpand" />
+            <Button Text="Deck Builder WIP" HorizontalOptions="CenterAndExpand" />
+            <Button Text="Tracker" HorizontalOptions="CenterAndExpand" />
+        </StackLayout>
+
+    </Grid>
 
 </ContentPage>

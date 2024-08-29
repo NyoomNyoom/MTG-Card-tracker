@@ -14,13 +14,6 @@ public partial class MainPage : ContentPage
 	{
 		Card card = new Card("Black lotus", "2");
 		count++;
-
-		if (count == 1)
-			CounterBtn.Text = $"Clicked {card.GetName()} time";
-		else
-			CounterBtn.Text = $"Clicked {card.GetName()} times";
-
-		SemanticScreenReader.Announce(CounterBtn.Text);
 	}
 }
 
