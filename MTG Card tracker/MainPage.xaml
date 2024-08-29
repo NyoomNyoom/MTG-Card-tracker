@@ -64,7 +64,7 @@
             <Button Text="Collection WIP" HorizontalOptions="CenterAndExpand" />
             <Button Text="Decks WIP" HorizontalOptions="CenterAndExpand" />
             <Button Text="Deck Builder WIP" HorizontalOptions="CenterAndExpand" />
-            <Button Text="Tracker" HorizontalOptions="CenterAndExpand" />
+            <Button Text="Tracker" HorizontalOptions="CenterAndExpand" Clicked="Tracker_Clicked"/>
         </StackLayout>
 
     </Grid>
