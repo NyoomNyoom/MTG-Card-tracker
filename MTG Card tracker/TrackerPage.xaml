@@ -20,7 +20,9 @@
                         <AdaptiveTrigger MinWindowWidth="0"/>
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
-
+                        <Setter TargetName="NavBar" Property="IsVisible" Value="True" />
+                        <Setter TargetName="NavBar" Property="Grid.Row" Value="0" />
+                        
                     </VisualState.Setters>
                 </VisualState>
 
@@ -30,11 +32,19 @@
                         <AdaptiveTrigger MinWindowWidth="600"/>
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
+                        <Setter TargetName="NavBar" Property="IsVisible" Value="True" />
+                        <Setter TargetName="NavBar" Property="Grid.Row" Value="0" />
                         
                     </VisualState.Setters>
                 </VisualState>
             </VisualStateGroup>
         </VisualStateManager.VisualStateGroups>
 
+        <StackLayout x:Name="NavBar" Grid.Row="2" Orientation="Horizontal" BackgroundColor="LightGray" IsVisible="True">
+            <Button Text="Collection WIP" HorizontalOptions="CenterAndExpand" />
+            <Button Text="Decks WIP" HorizontalOptions="CenterAndExpand" />
+            <Button Text="Deck Builder WIP" HorizontalOptions="CenterAndExpand" />
+            <Button Text="Tracker" HorizontalOptions="CenterAndExpand" Clicked="Tracker_Clicked"/>
+        </StackLayout>
     </Grid>
 </ContentPage>
