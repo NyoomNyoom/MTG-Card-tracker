@@ -36,7 +36,7 @@
                         <AdaptiveTrigger MinWindowWidth="600"/>
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
-                        <!-- Show bottom navigation bar and adjust layout -->
+                        <!-- Show navigation bar and adjust layout -->
                         <Setter TargetName="NavBar" Property="IsVisible" Value="True" />
                         <Setter TargetName="NavBar" Property="Grid.Row" Value="0" />
 
