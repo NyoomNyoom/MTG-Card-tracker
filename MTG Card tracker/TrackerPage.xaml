@@ -8,7 +8,8 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
         <!-- Define VisualStateManager for responsive states -->
@@ -34,25 +35,33 @@
                     <VisualState.Setters>
                         <Setter TargetName="NavBar" Property="IsVisible" Value="True" />
                         <Setter TargetName="NavBar" Property="Grid.Row" Value="0" />
-                        
+
+                        <Setter TargetName="Tracker" Property="IsVisible" Value="True" />
+                        <Setter TargetName="Tracker" Property="Grid.Row" Value="1" />
                     </VisualState.Setters>
                 </VisualState>
             </VisualStateGroup>
         </VisualStateManager.VisualStateGroups>
 
-        <Grid x:Name="Tracker" Grid.Row="0" BackgroundColor="LightGrey">
+        <Grid x:Name="Tracker" Grid.Row="0">
             <Grid.ColumnDefinitions>
-                
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
             </Grid.ColumnDefinitions>
-            <Button x:Name="CommanderDmgBtn" Grid.Column="0" />
-            <Button x:Name="SubtractHealthBtn" Grid.Column="1" HorizontalOptions="StartAndExpand"/>
+            
+            <Button x:Name="CommanderDmgBtn" Grid.Column="0" Text="Cmdr"/>
+            <Button x:Name="SubtractHealthBtn" Grid.Column="1" HorizontalOptions="StartAndExpand" Text="-" />
+            <Button x:Name="AddHealthBtn" Grid.Column="2" HorizontalOptions="StartAndExpand" Text="+" />
+            <Button x:Name="CounterBtn" Grid.Column="3" Text="cntr"/>
         </Grid>
 
         <StackLayout x:Name="NavBar" Grid.Row="2" Orientation="Horizontal" BackgroundColor="LightGray" IsVisible="True">
             <Button Text="Collection WIP" HorizontalOptions="CenterAndExpand" />
             <Button Text="Decks WIP" HorizontalOptions="CenterAndExpand" />
             <Button Text="Deck Builder WIP" HorizontalOptions="CenterAndExpand" />
-            <Button Text="Tracker" HorizontalOptions="CenterAndExpand" Clicked="Tracker_Clicked"/>
+            <Button Text="Tracker" HorizontalOptions="CenterAndExpand"/>
         </StackLayout>
     </Grid>
 </ContentPage>
