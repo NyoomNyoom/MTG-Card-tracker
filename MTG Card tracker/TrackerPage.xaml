@@ -40,6 +40,14 @@
             </VisualStateGroup>
         </VisualStateManager.VisualStateGroups>
 
+        <Grid x:Name="Tracker" Grid.Row="0" BackgroundColor="LightGrey">
+            <Grid.ColumnDefinitions>
+                
+            </Grid.ColumnDefinitions>
+            <Button x:Name="CommanderDmgBtn" Grid.Column="0" />
+            <Button x:Name="SubtractHealthBtn" Grid.Column="1" HorizontalOptions="StartAndExpand"/>
+        </Grid>
+
         <StackLayout x:Name="NavBar" Grid.Row="2" Orientation="Horizontal" BackgroundColor="LightGray" IsVisible="True">
             <Button Text="Collection WIP" HorizontalOptions="CenterAndExpand" />
             <Button Text="Decks WIP" HorizontalOptions="CenterAndExpand" />
