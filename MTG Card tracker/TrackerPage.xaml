@@ -23,7 +23,7 @@
                     <VisualState.Setters>
                         <Setter TargetName="NavBar" Property="IsVisible" Value="True" />
                         <Setter TargetName="NavBar" Property="Grid.Row" Value="0" />
-                        
+
                     </VisualState.Setters>
                 </VisualState>
 
@@ -42,7 +42,6 @@
                 </VisualState>
             </VisualStateGroup>
         </VisualStateManager.VisualStateGroups>
-l
         <Grid x:Name="Tracker" Grid.Row="0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto" />
