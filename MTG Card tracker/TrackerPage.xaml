@@ -45,13 +45,29 @@
         
         <Grid x:Name="Tracker" Grid.Row="0">
             <Grid.RowDefinitions>
-                
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
             
             <Grid x:Name="trackerP1" Grid.Row="0" Grid.Column="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+
+                <Button x:Name="CommanderDmgBtn" Grid.Column="0" Text="Cmdr"/>
+                <Button x:Name="SubtractHealthBtn" Grid.Column="1" HorizontalOptions="StartAndExpand" Text="-" />
+                <Button x:Name="AddHealthBtn" Grid.Column="2" HorizontalOptions="StartAndExpand" Text="+" />
+                <Button x:Name="CounterBtn" Grid.Column="3" Text="cntr"/>
+            </Grid>
+
+            <Grid x:Name="trackerP2" Grid.Row="0" Grid.Column="1">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto" />
                     <ColumnDefinition Width="*" />
