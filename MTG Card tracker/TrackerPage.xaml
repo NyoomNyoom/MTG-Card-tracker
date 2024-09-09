@@ -57,42 +57,48 @@
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto" />
                     <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="Auto" />
                 </Grid.ColumnDefinitions>
 
                 <Button x:Name="CommanderDmgBtnP1" Grid.Column="0" Text="Cmdr"/>
                 <Button x:Name="SubtractHealthBtnP1" Grid.Column="1" HorizontalOptions="StartAndExpand" Text="-" />
-                <Button x:Name="AddHealthBtnP1" Grid.Column="2" HorizontalOptions="StartAndExpand" Text="+" />
-                <Button x:Name="CounterBtnP1" Grid.Column="3" Text="cntr"/>
+                <Label x:Name="P4HealthCounter" Text="40" Grid.Column="2" VerticalOptions="Center" TextColor="Black" />
+                <Button x:Name="AddHealthBtnP1" Grid.Column="3" HorizontalOptions="StartAndExpand" Text="+" />
+                <Button x:Name="CounterBtnP1" Grid.Column="4" Text="cntr"/>
             </Grid>
 
             <Grid x:Name="trackerP2" Grid.Row="0" Grid.Column="1">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto" />
                     <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="Auto" />
                 </Grid.ColumnDefinitions>
 
                 <Button x:Name="CommanderDmgBtnP2" Grid.Column="0" Text="Cmdr"/>
                 <Button x:Name="SubtractHealthBtnP2" Grid.Column="1" HorizontalOptions="StartAndExpand" Text="-" />
-                <Button x:Name="AddHealthBtnP2" Grid.Column="2" HorizontalOptions="StartAndExpand" Text="+" />
-                <Button x:Name="CounterBtnP2" Grid.Column="3" Text="cntr"/>
+                <Label x:Name="P4HealthCounter" Text="40" Grid.Column="2" VerticalOptions="Center" TextColor="Black" />
+                <Button x:Name="AddHealthBtnP2" Grid.Column="3" HorizontalOptions="StartAndExpand" Text="+" />
+                <Button x:Name="CounterBtnP2" Grid.Column="4" Text="cntr"/>
             </Grid>
 
             <Grid x:Name="trackerP3" Grid.Row="1" Grid.Column="0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto" />
                     <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="Auto" />
                 </Grid.ColumnDefinitions>
 
                 <Button x:Name="CommanderDmgBtnP3" Grid.Column="0" Text="Cmdr"/>
                 <Button x:Name="SubtractHealthBtnP3" Grid.Column="1" HorizontalOptions="StartAndExpand" Text="-" />
-                <Button x:Name="AddHealthBtnP3" Grid.Column="2" HorizontalOptions="StartAndExpand" Text="+" />
-                <Button x:Name="CounterBtnP3" Grid.Column="3" Text="cntr"/>
+                <Label x:Name="P4HealthCounter" Text="40" Grid.Column="2" VerticalOptions="Center" TextColor="Black" />
+                <Button x:Name="AddHealthBtnP3" Grid.Column="3" HorizontalOptions="StartAndExpand" Text="+" />
+                <Button x:Name="CounterBtnP3" Grid.Column="4" Text="cntr"/>
             </Grid>
 
             <Grid x:Name="trackerP4" Grid.Row="1" Grid.Column="1">
