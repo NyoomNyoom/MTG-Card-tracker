@@ -1,3 +1,6 @@
+using Microsoft.Maui.Layouts;
+using System.Xml.Schema;
+
 namespace MTG_Card_tracker;
 
 public partial class TrackerPage : ContentPage
@@ -14,11 +17,18 @@ public partial class TrackerPage : ContentPage
 
 	private void AddHP_p1(object sender, EventArgs e)
 	{
-
+		p1HP++;
+		UpdateHP();
 	}
 
     private void LoseHP_p1(object sender, EventArgs e)
     {
-
+        p1HP--;
+		UpdateHP();
     }
+
+	private void UpdateHP()
+	{
+		P1HealthCounter.Text = p1HP.ToString();
+	}
 }
