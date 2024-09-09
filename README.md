@@ -18,9 +18,10 @@ a life total tracker and a deck builder and tracker.
 
 So far I have only got 2 screens working a main menu and a tracker page.
 
-#### Tracker page
-* currently tracks health and has win/lose conditions built in.
+### Tracker page
+Currently working:
+* tracks health and has win/lose conditions built in.
+
 Next steps:
 * implementing commander damage
 * counters for poision, and emblems.
-* 
