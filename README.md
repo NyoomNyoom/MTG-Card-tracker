@@ -12,9 +12,15 @@ a life total tracker and a deck builder and tracker.
 * card scanning
 * different game modes for life tracker
 * collection $$ value
+* a tracker implementation page. (where you can organise how many players are playing, and starting life)
 
 ## Progress so far
 
 So far I have only got 2 screens working a main menu and a tracker page.
-The tracker page isnt currently tracking health but that will be fixed in the
-coming weeks.
+
+#### Tracker page
+* currently tracks health and has win/lose conditions built in.
+Next steps:
+* implementing commander damage
+* counters for poision, and emblems.
+* 
