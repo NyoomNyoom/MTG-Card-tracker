@@ -27,7 +27,43 @@ public partial class TrackerPage : ContentPage
 		UpdateHP();
     }
 
-	private void UpdateHP()
+    private void AddHP_p2(object sender, EventArgs e)
+    {
+        p2HP++;
+        UpdateHP();
+    }
+
+    private void LoseHP_p2(object sender, EventArgs e)
+    {
+        p2HP--;
+        UpdateHP();
+    }
+
+    private void AddHP_p3(object sender, EventArgs e)
+    {
+        p3HP++;
+        UpdateHP();
+    }
+
+    private void LoseHP_p3(object sender, EventArgs e)
+    {
+        p3HP--;
+        UpdateHP();
+    }
+
+    private void AddHP_p4(object sender, EventArgs e)
+    {
+        p4HP++;
+        UpdateHP();
+    }
+
+    private void LoseHP_p4(object sender, EventArgs e)
+    {
+        p4HP--;
+        UpdateHP();
+    }
+
+    private void UpdateHP()
 	{
 		P1HealthCounter.Text = p1HP.ToString();
 	}
