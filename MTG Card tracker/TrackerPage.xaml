@@ -43,6 +43,7 @@
             </VisualStateGroup>
         </VisualStateManager.VisualStateGroups>
         
+        <!-- The Tracker parent grid to layout how I want each tracking cluster displayed. -->
         <Grid x:Name="Tracker" Grid.Row="0">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*" />
@@ -53,7 +54,9 @@
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
             
+            <!-- The tracking cluster for player 1. -->
             <Grid x:Name="trackerP1" Grid.Row="0" Grid.Column="0">
+                <!-- The column definitions for the buttons and HP, the + and - buttons are designed to take up the most space. -->
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto" />
                     <ColumnDefinition Width="*" />
@@ -69,7 +72,9 @@
                 <Button x:Name="CounterBtnP1" Grid.Column="4" Text="cntr"/>
             </Grid>
 
+            <!-- The tracking cluster for player 2. -->
             <Grid x:Name="trackerP2" Grid.Row="0" Grid.Column="1">
+                <!-- The column definitions for the buttons and HP, the + and - buttons are designed to take up the most space. -->
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto" />
                     <ColumnDefinition Width="*" />
@@ -85,7 +90,9 @@
                 <Button x:Name="CounterBtnP2" Grid.Column="4" Text="cntr"/>
             </Grid>
 
+            <!-- The tracking cluster for player 3. -->
             <Grid x:Name="trackerP3" Grid.Row="1" Grid.Column="0">
+                <!-- The column definitions for the buttons and HP, the + and - buttons are designed to take up the most space. -->
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto" />
                     <ColumnDefinition Width="*" />
@@ -101,7 +108,9 @@
                 <Button x:Name="CounterBtnP3" Grid.Column="4" Text="cntr"/>
             </Grid>
 
+            <!-- The tracking cluster for player 4. -->
             <Grid x:Name="trackerP4" Grid.Row="1" Grid.Column="1">
+                <!-- The column definitions for the buttons and HP, the + and - buttons are designed to take up the most space. -->
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto" />
                     <ColumnDefinition Width="*" />
