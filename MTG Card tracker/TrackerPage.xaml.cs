@@ -66,5 +66,8 @@ public partial class TrackerPage : ContentPage
     private void UpdateHP()
 	{
 		P1HealthCounter.Text = p1HP.ToString();
+        P2HealthCounter.Text = p2HP.ToString();
+        P3HealthCounter.Text = p3HP.ToString();
+        P4HealthCounter.Text = p4HP.ToString();
 	}
 }
