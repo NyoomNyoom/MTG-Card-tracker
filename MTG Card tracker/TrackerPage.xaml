@@ -126,7 +126,8 @@
                 <Button x:Name="CounterBtnP4" Grid.Column="4" Text="cntr"/>
             </Grid>
         </Grid>
-
+        
+        <!-- The navigation menu-->
         <StackLayout x:Name="NavBar" Grid.Row="2" Orientation="Horizontal" BackgroundColor="LightGray" IsVisible="True">
             <Button Text="Collection WIP" HorizontalOptions="CenterAndExpand" />
             <Button Text="Decks WIP" HorizontalOptions="CenterAndExpand" />
