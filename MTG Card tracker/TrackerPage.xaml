@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MTG_Card_tracker.TrackerPage"
              Title="TrackerPage"
-             BackgroundImageSource="restart_sequence.png"
+             BackgroundImageSource="bloomburrow_background.png"
              NavigationPage.HasNavigationBar="False">
 
     <Grid>
@@ -119,11 +119,11 @@
                     <ColumnDefinition Width="Auto" />
                 </Grid.ColumnDefinitions>
 
-                <Button x:Name="CommanderDmgBtnP4" Grid.Column="0" Text="Cmdr"/>
+                <Button x:Name="CommanderDmgBtnP4" Grid.Column="0" Text="Cmdr" VerticalOptions="Start"/>
                 <Button x:Name="SubtractHealthBtnP4" Grid.Column="1" HorizontalOptions="StartAndExpand" Text="-" Clicked="LoseHP_p4"/>
                 <Label x:Name="P4HealthCounter" Text="40" Grid.Column="2" VerticalOptions="Center" TextColor="Black" FontSize="70" />
                 <Button x:Name="AddHealthBtnP4" Grid.Column="3" HorizontalOptions="StartAndExpand" Text="+" Clicked="AddHP_p4"/>
-                <Button x:Name="CounterBtnP4" Grid.Column="4" Text="cntr"/>
+                <Button x:Name="CounterBtnP4" Grid.Column="4" Text="cntr" VerticalOptions="Start"/>
             </Grid>
         </Grid>
         
