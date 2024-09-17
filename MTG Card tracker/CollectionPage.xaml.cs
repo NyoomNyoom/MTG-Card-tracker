@@ -1,10 +1,11 @@
+using MtgApiManager.Lib.Core;
+using MtgApiManager.Lib.Model;
 using MtgApiManager.Lib.Service;
 
 namespace MTG_Card_tracker;
 
 public partial class CollectionPage : ContentPage
 {
-	private string searchResults = null;
 
     IMtgServiceProvider serviceProvider = new MtgServiceProvider();
 
@@ -13,8 +14,20 @@ public partial class CollectionPage : ContentPage
 		InitializeComponent();
 	}
 
-    private void SearchButton_Clicked(object sender, EventArgs e)
+    private async void SearchButton_Clicked(object sender, EventArgs e)
     {
+        ICardService service = serviceProvider.GetCardService();
+        IOperationResult<List<ICard>> result = service.AllAsync().Result;
+
+        var searchResult = result.Value.ToArray();
+
+        foreach ( var card in searchResult )
+        {
+            if ( card != null )
+            {
+                searchResults.Text = card.Name;
+            }
+        }
 
     }
 }
