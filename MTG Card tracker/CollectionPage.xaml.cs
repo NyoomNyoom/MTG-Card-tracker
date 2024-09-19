@@ -26,6 +26,7 @@ public partial class CollectionPage : ContentPage
             if ( card != null )
             {
                 searchResults.Text = card.Name;
+                //searchImage.Source = ImageSource.FromUri();
             }
         }
 
