@@ -22,6 +22,10 @@ public partial class CollectionPage : ContentPage
  
         var apiResult = result.Value.ToArray();
 
+        searchImage.Source = ImageSource.FromUri(new System.Uri("http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=409741&type=card"));
+        searchResults.Text = "Hello!";
+        
+        /**
         foreach (var card in apiResult)
         {
             if (card != null)
@@ -30,15 +34,15 @@ public partial class CollectionPage : ContentPage
                 {
                     IOperationResult<List<ICard>> tempResult = service.Where(x => x.Name, card.Name).AllAsync().Result;
 
-                    if (tempResult.IsSuccess && tempResult.Value.First().MultiverseId != null)
+                    if (tempResult.IsSuccess)
                     {
-                        searchImage.Source = ImageSource.FromUri(tempResult.Value.First().ImageUrl);
-                        searchResults.Text = card.Name;
+                        searchImage.Source = ImageSource.FromUri(new System.Uri("http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=409741&type=card"));
+                        searchResults.Text = "Hello!";
                     }
                 }
             }
         }
-
+        **/
 
         /**
         var searchResult = result.Value.ToArray();
