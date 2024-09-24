@@ -12,15 +12,16 @@ a life total tracker and a deck builder and tracker.
 * card scanning
 * different game modes for life tracker
 * collection $$ value
-* a tracker implementation page. (where you can organise how many players are playing, and starting life)
+* a tracker initialisation page. (where you can organise how many players are playing, and starting life)
 
 ## Progress so far
 
-So far I have only got 2 screens working a main menu and a tracker page.
+So far I have 3 screens working a main menu, a tracker page and a barebones collection page where I am testing API calls.
 
 ### Tracker page
 Currently working:
 * tracks health and has win/lose conditions built in.
+* Getting the MTG api to return a card image (Having a couple of issues with null returns).
 
 Next steps:
 * implementing commander damage
