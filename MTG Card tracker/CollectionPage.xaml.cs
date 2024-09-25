@@ -23,7 +23,17 @@ public partial class CollectionPage : ContentPage
  
         var apiResult = result.Value.ToArray();
 
-        result.Value.ForEach(x => { Debug.WriteLine("" + x.Name); });
+        result.Value.ForEach(x => { 
+            Debug.WriteLine("Name: " + x.Name); 
+            if (x.ImageUrl != null)
+            {
+                Debug.WriteLine("Image URL " + x.ImageUrl.ToString());
+            }
+            else
+            {
+                Debug.WriteLine("No Image uri");
+            }
+        });
 
         searchImage.Source = ImageSource.FromUri(new System.Uri("http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=409741&type=card"));
         searchResults.Text = "Hello!";
