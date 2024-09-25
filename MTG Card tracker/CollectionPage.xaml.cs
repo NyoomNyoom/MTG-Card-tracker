@@ -33,6 +33,7 @@ public partial class CollectionPage : ContentPage
             {
                 Debug.WriteLine("No Image uri");
             }
+            Debug.WriteLine("Set: " + x.Set);
         });
 
         searchImage.Source = ImageSource.FromUri(new System.Uri("http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=409741&type=card"));
