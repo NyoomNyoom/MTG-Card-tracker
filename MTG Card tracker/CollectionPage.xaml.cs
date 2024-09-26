@@ -18,22 +18,22 @@ public partial class CollectionPage : ContentPage
     private async void SearchButton_Clicked(object sender, EventArgs e)
     {
         ICardService service = serviceProvider.GetCardService();
-        //IOperationResult<List<ICard>> result = service.AllAsync().Result;
         IOperationResult<List<ICard>> result = service.Where(x => x.Name, "Archangel Avacyn").AllAsync().Result;
  
         var apiResult = result.Value.ToArray();
 
         result.Value.ForEach(x => { 
-            Debug.WriteLine("Name: " + x.Name); 
+            ;
             if (x.ImageUrl != null)
             {
+                Debug.WriteLine("Name: " + x.Name);
                 Debug.WriteLine("Image URL " + x.ImageUrl.ToString());
+                Debug.WriteLine("Set: " + x.Set);
             }
             else
             {
                 Debug.WriteLine("No Image uri");
             }
-            Debug.WriteLine("Set: " + x.Set);
         });
 
         searchImage.Source = ImageSource.FromUri(new System.Uri("http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=409741&type=card"));
