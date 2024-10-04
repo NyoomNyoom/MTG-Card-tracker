@@ -8,7 +8,7 @@ using System.Net.Http.Headers;
 
 namespace MTG_Card_tracker
 {
-    public class ScryfallAPIHandler
+    public static class ScryfallAPIHandler
     {
         public static HttpClient ScryFallClient { get; set; }
 
@@ -18,5 +18,7 @@ namespace MTG_Card_tracker
             ScryFallClient.DefaultRequestHeaders.Accept.Clear();
             ScryFallClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
         }
+
+
     }
 }
