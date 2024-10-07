@@ -18,6 +18,15 @@ namespace MTG_Card_tracker
                 string encodedSearch = HttpUtility.UrlEncode(searchTerm);
                 url = $"https://api.scryfall.com/cards/search?order=cmc&q={encodedSearch}";
             }
+            else
+            {
+                url = HttpUtility.UrlEncode("https://api.scryfall.com/cards/search?order=cmc");
+            }
+
+            using (HttpResponseMessage response = await ScryfallAPIHandler.ScryFallClient.GetAsync(url))
+            {
+
+            }
         }
     }
 }
