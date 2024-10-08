@@ -8,6 +8,9 @@ namespace MTG_Card_tracker
 {
     public class CardModel
     {
+        public String Name { get; set; }
+        public int Id { get; set; }
+        public Uri ImageURI { get; set; }
 
     }
 }
