@@ -14,7 +14,14 @@ namespace MTG_Card_tracker
 
         public CardModel(string NameIn, string IdIn)
         {
-
+            Name = NameIn;
+            try
+            {
+                Id = Int32.Parse(IdIn);
+            } catch(FormatException)
+            {
+                Id = -1;
+            }
         }
     }
 }
