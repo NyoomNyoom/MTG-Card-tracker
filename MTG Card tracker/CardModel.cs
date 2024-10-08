@@ -12,5 +12,9 @@ namespace MTG_Card_tracker
         public int Id { get; set; }
         public Uri ImageURI { get; set; }
 
+        public CardModel(string NameIn, string IdIn)
+        {
+
+        }
     }
 }
