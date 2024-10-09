@@ -9,7 +9,7 @@ namespace MTG_Card_tracker
 {
     public class CardSearcher
     {
-        public async Task SearchScryfall(string searchTerm = null)
+        public async Task<SearchResultModel> SearchScryfall(string searchTerm = null)
         {
             string url = null;
 
@@ -25,7 +25,15 @@ namespace MTG_Card_tracker
 
             using (HttpResponseMessage response = await ScryfallAPIHandler.ScryFallClient.GetAsync(url))
             {
+                if (response.IsSuccessStatusCode)
+                {
+                    SearchResultModel SearchResults = await response.Content.ReadAsAsync<SearchResultModel>();
 
+                    return SearchResults;
+                } else
+                {
+                    throw new Exception(response.ReasonPhrase);
+                }          
             }
         }
     }
