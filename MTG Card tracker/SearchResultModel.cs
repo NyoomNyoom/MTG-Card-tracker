@@ -8,5 +8,9 @@ namespace MTG_Card_tracker
 {
     public class SearchResultModel
     {
+        public String Object { get; set; }
+        public int Total_cards { get; set; }
+        public bool Has_more { get; set; } 
+        public String Next_page { get; set; }
     }
 }
