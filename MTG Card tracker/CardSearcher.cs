@@ -11,7 +11,7 @@ namespace MTG_Card_tracker
     {
         public async Task<SearchResultModel> SearchScryfall(string searchTerm = null)
         {
-            string url = null;
+            string url;
 
             if (!string.IsNullOrEmpty(searchTerm))
             {
