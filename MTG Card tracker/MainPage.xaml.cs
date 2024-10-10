@@ -18,5 +18,12 @@ public partial class MainPage : ContentPage
 	{
 		await Navigation.PushAsync(new NavigationPage(new CollectionPage()));
 	}
+
+	private void Search_Completed(object sender, EventArgs e)
+	{
+		string query = ((Entry)sender).Text;
+
+		SearchResults.Text = query;
+	}
 }
 
