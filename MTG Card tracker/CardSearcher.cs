@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,10 +18,12 @@ namespace MTG_Card_tracker
             {
                 string encodedSearch = HttpUtility.UrlEncode(searchTerm);
                 url = $"https://api.scryfall.com/cards/search?order=cmc&q={encodedSearch}";
+                Debug.WriteLine("if: True");
             }
             else
             {
                 url = HttpUtility.UrlEncode("https://api.scryfall.com/cards/search?order=cmc");
+                Debug.WriteLine("if: False");
             }
 
             using (HttpResponseMessage response = await ScryfallAPIHandler.ScryFallClient.GetAsync(url))
