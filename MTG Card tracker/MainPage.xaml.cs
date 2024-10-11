@@ -19,11 +19,17 @@ public partial class MainPage : ContentPage
 		await Navigation.PushAsync(new NavigationPage(new CollectionPage()));
 	}
 
-	private void Search_Completed(object sender, EventArgs e)
+	private async void Search_Completed(object sender, EventArgs e)
 	{
+		CardSearcher search = new();
+
 		string query = ((Entry)sender).Text;
 
-		SearchResults.Text = query;
-	}
+		Task<SearchResultModel> resultTask = search.SearchScryfall(query);
+
+		SearchResultModel results = await resultTask;
+
+        SearchResults.Text = results.Object;
+    }
 }
 
