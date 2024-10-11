@@ -16,7 +16,7 @@ a life total tracker and a deck builder and tracker.
 
 ## Progress so far
 
-So far I have 3 screens working a main menu, a tracker page and a barebones collection page where I am testing API calls.
+So far I have 3 screens working a main menu, a tracker page and a barebones collection page where I am testing API calls. I have added a second folder with a C# project inside of it for testing the API calls as I am running into some interesting errors and this will make it easier to test.
 
 ### Tracker page
 Currently working:
