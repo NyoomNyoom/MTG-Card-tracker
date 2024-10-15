@@ -31,7 +31,7 @@ namespace Scryfall_API_tester
             {
                 if (response.IsSuccessStatusCode)
                 {
-                    ResultModel SearchResults = await response.Content.ReadFromJsonAsync<ResultModel>;
+                    ResultModel? SearchResults = await response.Content.ReadFromJsonAsync<ResultModel>();
 
                     return SearchResults;
                 }
