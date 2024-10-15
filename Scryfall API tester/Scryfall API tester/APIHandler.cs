@@ -8,7 +8,7 @@ namespace Scryfall_API_tester
 {
     public static class APIHandler
     {
-        public static HttpClient? APIClient { get; set; }
+        public static HttpClient APIClient { get; set; }
         
         public static void InitialiseClient()
         {
