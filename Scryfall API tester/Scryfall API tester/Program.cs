@@ -1,2 +1,21 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using Scryfall_API_tester;
+using System.Threading.Tasks;
+class Program
+{
+    static async Task Main(string[] args)
+    {
+        Console.WriteLine("Hello, World!");
+
+        APIHandler.InitialiseClient();
+        CardSearch search = new();
+
+        // Await the search result
+        ResultModel results = await search.SearchScryfall("black");
+
+        // Process or display the results
+        Console.WriteLine("Search completed!");
+        // You can now access 'results' and process the data
+
+        Console.WriteLine(results.Object);
+    }
+}

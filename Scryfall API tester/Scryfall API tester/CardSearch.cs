@@ -37,7 +37,7 @@ namespace Scryfall_API_tester
                 }
                 else
                 {
-                    throw new Exception(response.ReasonPhrase);
+                    throw new Exception(response.Content.ToString());
                 }
             }
         }
