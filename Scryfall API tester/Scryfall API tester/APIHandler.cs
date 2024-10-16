@@ -16,6 +16,7 @@ namespace Scryfall_API_tester
             APIClient = new HttpClient();
             APIClient.DefaultRequestHeaders.Accept.Clear();
             APIClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+            APIClient.DefaultRequestHeaders.UserAgent.ParseAdd("MTGCardTracker/1.0");
         }
     }
 }
