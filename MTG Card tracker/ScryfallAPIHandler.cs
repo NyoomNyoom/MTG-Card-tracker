@@ -17,6 +17,7 @@ namespace MTG_Card_tracker
             ScryFallClient = new HttpClient();
             ScryFallClient.DefaultRequestHeaders.Accept.Clear();
             ScryFallClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+            ScryFallClient.DefaultRequestHeaders.UserAgent.ParseAdd("MTGCardTracker/1.0");
         }
 
 
