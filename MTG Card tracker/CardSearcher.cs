@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 using System.Web;
 
@@ -28,9 +30,16 @@ namespace MTG_Card_tracker
             {
                 if (response.IsSuccessStatusCode)
                 {
-                    SearchResultModel SearchResults = await response.Content.ReadAsAsync<SearchResultModel>();
+                    //SearchResultModel SearchResults = await response.Content.ReadAsAsync<SearchResultModel>();
+                    string jsonString = await response.Content.ReadAsStringAsync();
 
-                    return SearchResults;
+                    ScryfallResponse  scryfallResponse = JsonSerializer.Deserialize<ScryfallResponse>(jsonString);
+
+                    foreach (Card card in scryfallResponse.data)
+                    {
+                        Console.WriteLine($"Card Name: {card.GetName}");
+                    }
+
                 } else
                 {
                     throw new Exception(response.ReasonPhrase);
