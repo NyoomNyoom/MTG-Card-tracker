@@ -10,12 +10,12 @@ class Program
         CardSearch search = new();
 
         // Await the search result
-        ResultModel results = await search.SearchScryfall("black");
+        await search.SearchScryfall();
 
         // Process or display the results
         Console.WriteLine("Search completed!");
         // You can now access 'results' and process the data
 
-        Console.WriteLine(results.Object);
+        //Console.WriteLine(results.Object);
     }
 }
