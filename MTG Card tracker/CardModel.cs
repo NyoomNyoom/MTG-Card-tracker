@@ -36,7 +36,7 @@ namespace MTG_Card_tracker
 
     public class ScryfallResponse
     {
-        public List<Card> data { get; set; }
+        public List<CardModel> data { get; set; }
         public bool has_more { get; set; }
         public string next_page { get; set; }
     }
