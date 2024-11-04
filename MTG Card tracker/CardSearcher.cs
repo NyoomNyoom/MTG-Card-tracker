@@ -33,11 +33,11 @@ namespace MTG_Card_tracker
                     //SearchResultModel SearchResults = await response.Content.ReadAsAsync<SearchResultModel>();
                     string jsonString = await response.Content.ReadAsStringAsync();
 
-                    ScryfallResponse  scryfallResponse = JsonSerializer.Deserialize<ScryfallResponse>(jsonString);
+                    ScryfallResponse scryfallResponse = JsonSerializer.Deserialize<ScryfallResponse>(jsonString);
 
-                    foreach (Card card in scryfallResponse.data)
+                    foreach (CardModel card in scryfallResponse.data)
                     {
-                        Console.WriteLine($"Card Name: {card.GetName}");
+                        Console.WriteLine($"Card Name: {card.name}");
                     }
 
                 } else

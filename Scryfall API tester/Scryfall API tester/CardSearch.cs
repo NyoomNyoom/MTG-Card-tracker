@@ -7,7 +7,7 @@ public class CardSearch
 {
     public async Task SearchScryfall()
     {
-        string url = "https://api.scryfall.com/cards/search?q=black"; // Example URL
+        string url = "https://api.dictionaryapi.dev/api/v2/entries/en/hello"; // Example URL
         using (HttpResponseMessage response = await APIHandler.APIClient.GetAsync(url))
         {
             if (response.IsSuccessStatusCode)
@@ -17,6 +17,9 @@ public class CardSearch
                 // Deserialize the response into ScryfallResponse object
                 ScryfallResponse scryfallResponse = JsonSerializer.Deserialize<ScryfallResponse>(jsonString);
 
+                Console.WriteLine(jsonString);
+
+                /*
                 // Iterate over each card in the data list
                 foreach (Card card in scryfallResponse.data)
                 {
@@ -33,6 +36,7 @@ public class CardSearch
                 {
                     Console.WriteLine($"More cards available at: {scryfallResponse.next_page}");
                 }
+                */
             }
             else
             {

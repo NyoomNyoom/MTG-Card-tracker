@@ -35,8 +35,10 @@ namespace Scryfall_API_tester
 
     public class ScryfallResponse
     {
-        public List<Card> data { get; set; }
-        public bool has_more { get; set; }
-        public string next_page { get; set; }
+        public List<Card>? data { get; set; }
+        public bool? has_more { get; set; }
+        public string? next_page { get; set; }
+
+        public string word { get; set; }
     }
 }
