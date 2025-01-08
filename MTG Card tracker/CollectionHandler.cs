@@ -6,7 +6,21 @@ using System.Threading.Tasks;
 
 namespace MTG_Card_tracker
 {
-    internal class CollectionHandler
+    public class CollectionHandler
     {
+        public CollectionHandler() 
+        { 
+        
+        }
+
+        public void loadCollection()
+        {
+
+        }
+
+        public void saveCollection()
+        {
+
+        }
     }
 }
