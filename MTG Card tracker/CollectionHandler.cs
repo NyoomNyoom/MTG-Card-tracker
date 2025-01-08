@@ -13,12 +13,12 @@ namespace MTG_Card_tracker
         
         }
 
-        public void loadCollection()
+        public void LoadCollection()
         {
 
         }
 
-        public void saveCollection()
+        public void SaveCollection()
         {
 
         }
