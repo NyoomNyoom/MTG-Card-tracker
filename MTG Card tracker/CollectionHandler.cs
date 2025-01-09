@@ -8,17 +8,39 @@ namespace MTG_Card_tracker
 {
     public class CollectionHandler
     {
+        private readonly List<CardModel> collection;
+
         public CollectionHandler() 
-        { 
-        
+        {
+            collection = LoadCollection();
+
+            if(collection == null )
+            {
+                collection = new List<CardModel>();
+            }
         }
 
-        public void LoadCollection()
+        private List<CardModel> LoadCollection()
+        {
+
+            return null;
+        }
+
+        public void SaveCollection()
         {
 
         }
 
-        public void SaveCollection()
+        public void AddCard()
+        {
+
+        }
+        public void RemoveCard()
+        {
+
+        }
+
+        public void SortCollection()
         {
 
         }
