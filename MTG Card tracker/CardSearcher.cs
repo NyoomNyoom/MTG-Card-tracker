@@ -45,6 +45,8 @@ namespace MTG_Card_tracker
                     throw new Exception(response.ReasonPhrase);
                 }          
             }
+
+            return null;
         }
     }
 }
