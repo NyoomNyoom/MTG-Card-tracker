@@ -13,7 +13,7 @@ namespace MTG_Card_tracker
 
         public CollectionHandler() 
         {
-            collection = LoadCollection();
+            LoadCollection();
 
             if(collection == null )
             {
@@ -21,12 +21,20 @@ namespace MTG_Card_tracker
             }
         }
 
-        private List<CardModel> LoadCollection()
+        private void LoadCollection()
         {
+            FileStream inputFile;
 
+            string collectionFile = Path.Combine(FileSystem.Current.AppDataDirectory, "collection.txt");
 
-
-            return null;
+            try
+            {
+                using FileStream fileIn = System.IO.File.OpenRead(collectionFile);
+                inputFile = fileIn;
+            } catch (System.IO.FileNotFoundException)
+            {
+                inputFile = null;
+            }
         }
 
         public async void SaveCollection()
