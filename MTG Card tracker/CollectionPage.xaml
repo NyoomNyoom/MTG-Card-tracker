@@ -7,7 +7,7 @@
     
     <VerticalStackLayout>
         <Label Text="Welcome to your collection" />
-        <Button x:Name="searchButton" Text="Search" Clicked="SearchButton_Clicked"/>
+       <!--<Button x:Name="searchButton" Text="Search" Clicked="SearchButton_Clicked"/>-->
         <Label x:Name="searchResults" Text="" />
         <Image x:Name="searchImage" HeightRequest="200" />
     </VerticalStackLayout>

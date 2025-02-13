@@ -14,7 +14,7 @@ public partial class CollectionPage : ContentPage
 	{
 		InitializeComponent();
 	}
-
+/**
     private async void SearchButton_Clicked(object sender, EventArgs e)
     {
         ICardService service = serviceProvider.GetCardService();
@@ -23,7 +23,6 @@ public partial class CollectionPage : ContentPage
         var apiResult = result.Value.ToArray();
 
         result.Value.ForEach(x => { 
-            ;
             if (x.ImageUrl != null)
             {
                 Debug.WriteLine("Name: " + x.Name);
@@ -39,7 +38,6 @@ public partial class CollectionPage : ContentPage
         searchImage.Source = ImageSource.FromUri(new System.Uri("http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=409741&type=card"));
         searchResults.Text = "Hello!";
         
-        /**
         foreach (var card in apiResult)
         {
             if (card != null)
@@ -56,9 +54,7 @@ public partial class CollectionPage : ContentPage
                 }
             }
         }
-        **/
 
-        /**
         var searchResult = result.Value.ToArray();
 
             foreach ( var card in searchResult )
@@ -69,7 +65,7 @@ public partial class CollectionPage : ContentPage
                     //searchImage.Source = ImageSource.FromUri();
                 }
             }
-        **/
-
-    }
+        }
+    **/
+    
 }
