@@ -2,8 +2,8 @@
 
 ## About
 
-This project aims to cover a nieche in Magic the Gathering
-that I have mot found a solution for that fits my specific needs.
+This project aims to cover a niche in Magic the Gathering
+that I have not found a solution for that fits my specific needs.
 This project is going consist of a card collection tracker,
 a life total tracker and a deck builder and tracker.
 
